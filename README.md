@@ -10,7 +10,7 @@
 brew remove -f curl
 
 # Download the curl ruby install script provided by cloudflare
-wget https://raw.githubusercontent.com/cloudflare/homebrew-cloudflare/master/curl.rb
+wget https://github.com/eric-gitta-moore/homebrew-cloudflare/raw/master/curl.rb
 
 # Install curl via that script from the latest git repos
 # brew install --HEAD -s curl.rb
