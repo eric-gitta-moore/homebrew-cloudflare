@@ -93,6 +93,7 @@ class Curl < Formula
       --without-libpsl
       --with-quiche=#{quiche.parent}/target/release
       --enable-alt-svc
+      --enable-ech
     ]
 
     args << if OS.mac?
