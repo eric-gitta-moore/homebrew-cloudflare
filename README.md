@@ -90,7 +90,22 @@ gateway=off
 rbi=off
 kex=X25519
 
-curl -v \
+❯ x doggo --debug --time pasyun-sg01-sdwan.larkoffice.netlib.re HTTPS @https://doh.pub/dns-query
+time=2025-12-10T15:57:27.802+08:00 level=DEBUG msg="LoadNameservers: Initial nameservers" nameservers=[https://doh.pub/dns-query]
+time=2025-12-10T15:57:27.803+08:00 level=DEBUG msg="Added nameserver" nameserver="{Address:https://doh.pub/dns-query Type:doh}"
+time=2025-12-10T15:57:27.803+08:00 level=DEBUG msg="LoadNameservers: Final nameservers" nameservers="[{Address:https://doh.pub/dns-query Type:doh}]"
+time=2025-12-10T15:57:27.803+08:00 level=DEBUG msg="initiating DOH resolver"
+time=2025-12-10T15:57:27.804+08:00 level=DEBUG msg="Attempting to resolve" domain=pasyun-sg01-sdwan.larkoffice.netlib.re. ndots=0 nameserver=https://doh.pub/dns-query
+time=2025-12-10T15:57:27.865+08:00 level=DEBUG msg="DOH response header" Content-Type=[application/dns-message]
+time=2025-12-10T15:57:27.865+08:00 level=DEBUG msg="DOH response header" Content-Length=[468]
+time=2025-12-10T15:57:27.865+08:00 level=DEBUG msg="DOH response header" Server=[nginx]
+time=2025-12-10T15:57:27.865+08:00 level=DEBUG msg="DOH response header" Date="[Wed, 10 Dec 2025 07:57:27 GMT]"
+NAME                                    TYPE    CLASS   TTL     ADDRESS                                                                                                 NAMESERVER                  TIME TAKEN 
+pasyun-sg01-sdwan.larkoffice.netlib.re. HTTPS   IN      186s    1 . alpn="h3,h2" ipv4hint="104.21.27.153,172.67.142.246"                                                https://doh.pub/dns-query   61ms      
+                                                                ech="AEX+DQBBmQAgACDEGEQ619JgOICZmPOH5d4I2c68Kg9/et66cS9Rmd5DaQAEAAEAAQASY2xvdWRmbGFyZS1lY2guY29tAAA="                                        
+                                                                ipv6hint="2606:4700:3031::ac43:8ef6,2606:4700:3037::6815:1b99"                                                                       
+
+> curl -v \
     --ech hard \
     --doh-url https://doh.pub/dns-query \
     https://pasyun-sg01-sdwan.larkoffice.netlib.re/cdn-cgi/trace
