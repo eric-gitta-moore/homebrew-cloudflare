@@ -66,5 +66,31 @@ rbi=off
 kex=X25519
 ```
 
+## ECH + 优选IP
+
+```sh
+❯ curl -v \
+    --ech ecl:AEX+DQBBmQAgACDEGEQ619JgOICZmPOH5d4I2c68Kg9/et66cS9Rmd5DaQAEAAEAAQASY2xvdWRmbGFyZS1lY2guY29tAAA= \
+    --connect-to pasyun-sg01-sdwan.larkoffice.netlib.re:443:openai.com:443 \
+    https://pasyun-sg01-sdwan.larkoffice.netlib.re/cdn-cgi/trace
+fl=998f78
+h=pasyun-sg01-sdwan.larkoffice.netlib.re
+ip=203.208.167.148
+ts=1765352989.000
+visit_scheme=https
+uag=curl/8.18.0-DEV
+colo=SIN
+sliver=none
+http=http/2
+loc=SG
+tls=TLSv1.3
+sni=encrypted
+warp=off
+gateway=off
+rbi=off
+kex=X25519
+```
+
+
 Reference:
 - https://gist.github.com/xmlking/cff9510dac9281d29390392cbbb033a8
