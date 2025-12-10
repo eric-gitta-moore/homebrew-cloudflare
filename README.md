@@ -14,7 +14,10 @@ wget https://raw.githubusercontent.com/cloudflare/homebrew-cloudflare/master/cur
 
 # Install curl via that script from the latest git repos
 # brew install --HEAD -s curl.rb
-brew install --formula --HEAD -s curl.rb
+# brew install --formula --HEAD -s curl.rb
+brew tap-new local/custom
+cp curl.rb $(brew --repository local/custom)/Formula/
+brew install --HEAD -s local/custom/curl
 
 # Tell your cli to use the curl version just installed (if you're using zsh, othwerise you might need `~/.bashrc`)
 echo 'export PATH="/usr/local/opt/curl/bin:$PATH"' >> ~/.zshrc
