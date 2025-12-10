@@ -42,5 +42,29 @@ Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns lda
 Features: alt-svc AsynchDNS brotli ECH GSS-API HSTS HTTP2 HTTP3 HTTPS-proxy HTTPSRR IDN IPv6 Kerberos Largefile libz NTLM SPNEGO SSL threadsafe UnixSockets zstd
 ```
 
+## 测试是否生效
+
+> sni=encrypted
+
+```sh
+❯ curl --ech hard --doh-url https://doh.pub/dns-query https://cloudflare-ech.com/cdn-cgi/trace 
+fl=1023f55
+h=cloudflare-ech.com
+ip=2400:a860:2:c::3
+ts=1765352669.337
+visit_scheme=https
+uag=curl/8.18.0-DEV
+colo=LAX
+sliver=none
+http=http/3
+loc=CN
+tls=TLSv1.3
+sni=encrypted
+warp=off
+gateway=off
+rbi=off
+kex=X25519
+```
+
 Reference:
 - https://gist.github.com/xmlking/cff9510dac9281d29390392cbbb033a8
