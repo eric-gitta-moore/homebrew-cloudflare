@@ -89,6 +89,11 @@ warp=off
 gateway=off
 rbi=off
 kex=X25519
+
+curl -v \
+    --ech hard \
+    --doh-url https://doh.pub/dns-query \
+    https://pasyun-sg01-sdwan.larkoffice.netlib.re/cdn-cgi/trace
 ```
 
 
