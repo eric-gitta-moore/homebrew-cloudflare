@@ -34,6 +34,12 @@ $ curl --version | grep HTTP3
 
 # Try curl on any HTTP/3 enabled sites.
 curl --http3 https://blog.cloudflare.com -I
+
+❯ curl --version
+curl 8.18.0-DEV (aarch64-apple-darwin24.5.0) libcurl/8.18.0-DEV BoringSSL zlib/1.2.12 brotli/1.2.0 zstd/1.5.7 libidn2/2.3.8 libssh2/1.11.1 nghttp2/1.68.0 quiche/0.24.6 librtmp/2.3 mit-krb5/1.7-prerelease OpenLDAP/2.6.10
+Release-Date: [unreleased]
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp ws wss
+Features: alt-svc AsynchDNS brotli ECH GSS-API HSTS HTTP2 HTTP3 HTTPS-proxy HTTPSRR IDN IPv6 Kerberos Largefile libz NTLM SPNEGO SSL threadsafe UnixSockets zstd
 ```
 
 Reference:
